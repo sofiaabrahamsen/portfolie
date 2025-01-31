@@ -1,0 +1,8 @@
+@import 'variables.css';
+@import 'contact.css';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
