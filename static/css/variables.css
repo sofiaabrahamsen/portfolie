@@ -1,0 +1,18 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+/* Global Variables */
+:root {
+    /* Dark Theme Colors */
+    --primary-bg-dark: #0B3D2E; /* Deep forest green */
+    --secondary-bg-dark: #145C46; /* Rich dark green */
+    --primary-text-dark: #EDEDED; /* Light grayish text */
+    --button-bg-dark: #D4A017; /* Golden accent */
+    --button-hover-bg-dark: #B38600; /* Darker golden */
+    
+    /* Blue Theme Colors */
+    --primary-bg: #1B2A49; /* Deep navy blue */
+    --secondary-bg: #283D70; /* Rich dark blue */
+    --primary-text: #EAEAEA; /* Light grayish text */
+    --button-bg: #4A90E2; /* Soft sky blue */
+    --button-hover-bg: #357ABD; /* Darker blue on hover */
+}

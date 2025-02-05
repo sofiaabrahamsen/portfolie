@@ -1,0 +1,101 @@
+/* Button Styling */
+button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    margin: 0.625rem;
+    cursor: pointer;
+    font-size: 1rem; /* 16px */
+    border-radius: 0.3125rem; /* 5px */
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Timeline Container */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.25rem; /* 20px */
+}
+
+/* Timeline Item */
+.timeline-item {
+    background: var(--secondary-bg);
+    width: 60%;
+    max-width: 37.5rem; /* 600px */
+    margin: 1.25rem 0; /* 20px */
+    padding: 1.25rem; /* 20px */
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.timeline-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.15); /* 6px 12px */
+}
+
+/* Timeline Content */
+.timeline-content {
+    text-align: left;
+    padding-left: 0.9375rem; /* 15px */
+}
+
+/* Title Styling */
+.timeline-content .title {
+    font-size: 1.25rem; /* 20px */
+    font-weight: bold;
+    margin-bottom: 0.3125rem; /* 5px */
+    color: var(--primary-text);
+}
+
+/* Year Styling */
+.timeline-content .year {
+    font-size: 1rem; /* 16px */
+    font-weight: bold;
+    color: var(--button-bg);
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+/* Description Styling */
+.timeline-content .description {
+    font-size: 1rem; /* 16px */
+    color: var(--primary-text);
+    line-height: 1.4;
+}
+
+/* Dark Theme Adjustments */
+body[data-theme="dark"] .timeline-item {
+    background: var(--secondary-bg-dark);
+}
+
+body[data-theme="dark"] .timeline-content .title,
+body[data-theme="dark"] .timeline-content .description {
+    color: var(--primary-text-dark);
+}
+
+body[data-theme="dark"] .timeline-content .year {
+    color: var(--button-bg-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    button {
+        width: 80%;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}

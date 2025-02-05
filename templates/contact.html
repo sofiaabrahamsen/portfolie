@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="../static/app.js" defer></script>
 </head>
 <body>
-    contact siden
+    <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/">
+                    <img src="{{ url_for('static', filename='assets/portfolio-logo.webp') }}" alt="My Portfolio Logo" class="logo-img">
+                </a>
+            </div>
+    
+            <!-- Navigation Links -->
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="cv">CV</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle">
+                Toggle Theme
+            </button>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <section>
+            <div>
+                <h3>Contact</h3>
+                <p>Telephone: <a href="tel:+4553663634" tabindex="0">+45 53 66 36 34</a></p>
+                <p>E-mail: <a href="mailto:sofia.abrahamsen@yahoo.com" tabindex="0">sofia.abrahamsen@yahoo.com</a></p>
+            </div>
+            <div>
+                <h3>Available</h3>
+                <p>All the time</p>
+            </div>
+            <div>
+                <h3>Follow me</h3>
+                <div class="social-icons">
+                    <a href="https://github.com/sofiaabrahamsen" class="social-icon" aria-label="Github" target="_blank">
+                        <em class="fa-brands fa-github"></em>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sofia-abrahamsen-982a051b4/" class="social-icon" aria-label="LinkedIn" target="_blank">
+                        <em class="fa-brands fa-linkedin"></em>
+                    </a>
+                    <a href="https://www.instagram.com/sofia_abrahamsen/" class="social-icon" aria-label="Instagram" target="_blank">
+                        <em class="fa-brands fa-instagram"></em>
+                    </a>
+                    <a href="https://www.facebook.com/sofia.abrahamsen/" class="social-icon" aria-label="Facebook" target="_blank">
+                        <em class="fa-brands fa-facebook-f"></em>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div>
+            <p>&copy; 2024 Sofia Abrahamsen. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

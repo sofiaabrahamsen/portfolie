@@ -1,0 +1,36 @@
+{
+    "education": [
+        {
+            "year": "Aug 2024 – Feb 2025",
+            "title": "Top-up i Webudvikling (1. semester)",
+            "description": "Københavns Erhversakademi"
+        },
+        {
+            "year": "Aug 2021 - Jan 2024",
+            "title": "Uddannet datamatiker",
+            "description": "Københavns Erhversakademi"
+        },
+        {
+            "year": "Jan 2019 – Juli 2021",
+            "title": "HF enkeltfag",
+            "description": "Horsens HF&VUC og Frederiksberg HF&VUC"
+        }
+    ],
+    "work_experience": [
+        {
+            "year": "Feb 2020 – nu",
+            "title": "Deltidslagermedarbejder",
+            "description": "Rema Distribution A/S, 2650 Hvidovre - Truckkørsel og pakning af varer til Flammen og tankstationer."
+        },
+        {
+            "year": "Okt 2020 – Mar 2022",
+            "title": "Esportstræner i Counter-Strike: Global Offensive (CSGO)",
+            "description": "Dreamgaming/Rødovre Gaming, 2610 Rødovre - Trænede børn (7-14 år) i CSGO, krævede tålmodighed, planlægning og serviceorientering."
+        },
+        {
+            "year": "Jan 2014 – Dec 2018",
+            "title": "Lagermedarbejder",
+            "description": "Aarstiderne A/S, 7150 Barrit - Optælling, pakning af varer, ansvar for paller og lastbiler, gradvist mere ansvar i produktionen."
+        }
+    ]
+}

@@ -22,6 +22,10 @@ def view_contact():
 def view_about():
     return render_template("about.html")
 
+@app.get("/cv")
+def view_cv():
+    return render_template("cv.html")
+
 ##########################
 if __name__ == "__main__":
     app.run(debug=True)
