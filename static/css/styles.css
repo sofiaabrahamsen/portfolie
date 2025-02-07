@@ -9,12 +9,13 @@
 
 /* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     background-color: var(--primary-bg-dark);
     color: var(--primary-text-dark);
     text-align: center;
     margin: 0;
     padding: 1.25rem; /* 20px */
+    font-size: var(--font-size-small);
 }
 
 /* Header Styling */
@@ -58,27 +59,43 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: var(--primary-text-dark);
-    font-size: 1.2rem;
+    font-size: var(--font-size-medium);
+    padding: 0.75rem 1.5rem;
+    background: var(--button-bg-dark);
+    border-radius: 0.5rem;
+    display: inline-block;
+    box-shadow: 0 4px 0 var(--button-hover-bg-dark), 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
     color: var(--button-bg-dark);
+    box-shadow: 0 2px 0 var(--button-bg-dark), 0 4px 6px rgba(0, 0, 0, 0.25);
+    transform: translateY(2px);
+    color: white;
 }
 
 /* Button Styling */
-.theme-toggle, button {
-    background-color: var(--button-bg-dark);
+.theme-toggle {
+    background-color: var(--button-black);
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 0.375rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease-in-out;
+    font-size: var(--font-size-small);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    font-weight: bold;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3); /* Grey shadow */
 }
 
 .theme-toggle:hover, button:hover {
-    background-color: var(--button-hover-bg-dark);
+    background-color: var(--button-lighter-black);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transform: translateY(2px);
 }
 
 /* Light Theme */
@@ -94,10 +111,24 @@ body[data-theme="light"] header {
 
 body[data-theme="light"] nav ul li a {
     color: var(--primary-text);
+    background: var(--button-bg);
+    box-shadow: 0 4px 0 var(--button-hover-bg);
 }
 
 body[data-theme="light"] nav ul li a:hover {
     color: var(--button-bg);
+    background: var(--button-hover-bg);
+}
+
+
+body[data-theme="light"] .theme-toggle {
+    background-color: var(--button-black); /* Still black for light theme */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Same grey shadow */
+}
+
+body[data-theme="light"] .theme-toggle:hover {
+    background-color: var(--button-lighter-black); /* Slightly lighter black for hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Darker grey shadow on hover */
 }
 
 body[data-theme="light"] button {
@@ -181,13 +212,13 @@ footer section div {
 }
 
 footer h3 {
-    font-size: 1.4rem;
+    font-size: var(--font-size-large);
     margin-bottom: 1rem;
     color: var(--button-bg-dark);
 }
 
 footer p, footer a {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     color: var(--primary-text-dark);
     text-decoration: none;
 }
@@ -206,7 +237,7 @@ footer a:hover {
 }
 
 .social-icon {
-    font-size: 1.8rem;
+    font-size: var(--font-size-xlarge);
     color: var(--primary-text-dark);
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -220,7 +251,7 @@ footer a:hover {
 footer div:last-of-type {
     margin-top: 2rem;
     padding-bottom: 1rem; /* Adds padding only to the bottom */
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     color: var(--primary-text-dark);
 }
 
@@ -265,6 +296,3 @@ html, body {
 main {
     flex-grow: 1; /* Pushes the footer down */
 }
-
-
-

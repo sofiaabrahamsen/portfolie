@@ -15,4 +15,15 @@
     --primary-text: #EAEAEA; /* Light grayish text */
     --button-bg: #4A90E2; /* Soft sky blue */
     --button-hover-bg: #357ABD; /* Darker blue on hover */
+
+    --button-black: #333; /* Black */
+    --button-lighter-black: #444; /* Slightly lighter black for hover */
+
+    /* Font Variables */
+    --font-family: 'Arial', sans-serif; /* Default font-family */
+    --font-size-small: 1rem; /* 16px */
+    --font-size-medium: 1.2rem; /* 19px */
+    --font-size-medium-custom: 1.8rem;
+    --font-size-large: 1.4rem; /* 22px */
+    --font-size-xlarge: 2rem; /* 32px */
 }
