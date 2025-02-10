@@ -86,6 +86,7 @@ body[data-theme="dark"] .timeline-content .year {
     color: var(--button-bg-dark);
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .timeline-item {

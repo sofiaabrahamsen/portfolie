@@ -33,9 +33,37 @@
             </button>
         </div>
     </header>
-    <main>
 
+    <main>
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h1>Portfolio loading… Please wait. Just kidding, it's already here. Enjoy!</h1>
+            <p>Grab a coffee, sit back, and scroll through my digital playground!</p>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section class="image-gallery">
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='assets/profil.jpg') }}" alt="Profile" class="image-item">
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='assets/padel1.jpg') }}" alt="Padel" class="image-item">
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='assets/par.jpg') }}" alt="Boyfriend" class="image-item">
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='assets/fuldprofil.jpg') }}" alt="profile" class="image-item">
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='assets/padel2.jpg') }}" alt="Padel" class="image-item">
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='assets/dimission-farve-j.jpg') }}" alt="Dimission" class="image-item">
+            </div>
+        </section>
     </main>
+
     <footer>
         <section>
             <div>
