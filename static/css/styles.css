@@ -37,7 +37,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 
 /* Logo Styling */
@@ -97,6 +96,47 @@ nav ul li a:hover {
     nav ul li a {
         font-size: var(--font-size-extra-small); /* Adjust font size for smaller screens */
         padding: 0.5rem; /* Reduce padding to fit the screen */
+    }
+}
+
+/* Medium Screens (Mobile landscape to tablets) */
+@media (min-width: 321px) and (max-width: 768px) {
+    .logo img {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    nav ul {
+        gap: 0.75rem; /* Adjust spacing between links */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Slightly larger font size for medium screens */
+        padding: 0.5rem; /* Adjust padding */
+    }
+}
+
+/* Desktop and Large Screens */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem; /* Add more padding for desktop */
+    }
+
+    .logo img {
+        width: 10vw; /* Logo size for desktop */
+        height: 10vw;
+    }
+
+    nav ul {
+        gap: 1.5rem; /* More space between links on larger screens */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Larger font size for desktop */
+        padding: 0.75rem 1.5rem;
     }
 }
 
