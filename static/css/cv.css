@@ -1,6 +1,6 @@
 /* Button Styling */
 button {
-    background-color: var(--button-bg);
+    background-color: var(--button-bg-dark);
     color: white;
     border: none;
     padding: 0.625rem 1.25rem; /* 10px 20px */
