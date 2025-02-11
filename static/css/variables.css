@@ -21,6 +21,7 @@
 
     /* Font Variables */
     --font-family: 'Arial', sans-serif; /* Default font-family */
+    --font-size-extra-small: 0.75rem;
     --font-size-small: 1rem; /* 16px */
     --font-size-medium: 1.2rem; /* 19px */
     --font-size-medium-custom: 1.8rem;
