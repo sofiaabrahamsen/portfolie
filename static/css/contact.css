@@ -155,3 +155,10 @@ body[data-theme="dark"] .contact-item i {
         flex-wrap: wrap;
     }
 }
+
+
+@media (min-width: 768px) {
+    .contact-page{
+        padding: 0rem;
+    }
+}

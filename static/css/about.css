@@ -1,0 +1,260 @@
+/* About Section */
+.about-section {
+    padding: 2rem 1rem; /* Adjust padding for mobile first */
+    text-align: center;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Profile Image (Fixed Size) */
+.profile-pic {
+    width: 100px; /* Smaller size for mobile */
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--button-bg-dark);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem; /* Centered */
+}
+
+/* Light Theme Adjustments */
+body[data-theme="light"] .profile-pic {
+    border-color: var(--button-bg);
+}
+
+/* About Content Layout */
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically for mobile */
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Personal Info & Education */
+.personal-info, .education-info, .key-competencies {
+    width: 100%; /* Take full width on mobile */
+    padding: 1.5rem;
+    background: var(--secondary-bg-dark);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Light Theme Adjustments */
+body[data-theme="light"] .personal-info,
+body[data-theme="light"] .education-info,
+body[data-theme="light"] .key-competencies {
+    background: var(--secondary-bg);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    color: var(--button-bg-dark);
+    margin-bottom: 1rem;
+}
+
+/* Light Theme Adjustments */
+body[data-theme="light"] h2 {
+    color: var(--button-bg);
+}
+
+/* Hobbies List */
+.hobbies-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.hobbies-list li {
+    font-size: 1rem; /* Smaller font size for mobile */
+    padding: 5px 0;
+}
+
+/* Timeline */
+.timeline {
+    border-left: 3px solid var(--button-bg-dark);
+    padding-left: 20px;
+    text-align: left;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.timeline-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: var(--primary-text-dark);
+}
+
+/* Light Theme Adjustments */
+body[data-theme="light"] .timeline {
+    border-left-color: var(--button-bg);
+}
+
+body[data-theme="light"] .timeline-item p {
+    color: var(--primary-text);
+}
+
+/* Key Competencies Section */
+.key-competencies {
+    margin-top: 3rem;
+    background: var(--secondary-bg-dark); /* Background color for the section */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Key Competencies Heading */
+.key-competencies h3 {
+    font-size: 1.5rem; /* Adjusted for mobile-first approach */
+    font-weight: bold;
+    color: var(--button-bg-dark);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Light Theme Adjustments */
+body[data-theme="light"] .key-competencies {
+    background: var(--secondary-bg);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="light"] .key-competencies h3 {
+    color: var(--button-bg);
+}
+
+/* Competencies List */
+.competencies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    gap: 1.5rem; /* Space between list items */
+}
+
+/* Individual Competency Item */
+.competencies-list li {
+    background: var(--primary-bg-light);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--primary-text-dark);
+    font-size: 1rem; /* Adjusted font size for mobile */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+/* Icon Styling */
+.competencies-list li span {
+    font-size: 1.5rem; /* Icon size */
+    margin-right: 1rem; /* Space between icon and text */
+}
+
+/* Hover Effect for List Items */
+.competencies-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Light Theme Adjustments */
+body[data-theme="light"] .competencies-list li {
+    background: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+body[data-theme="light"] .competencies-list li:hover {
+    background: var(--primary-bg-light);
+}
+
+
+
+/* Responsive Design for Larger Screens (Tablets, Desktops) */
+@media (min-width: 768px) {
+    /* About Content Layout */
+    .about-content {
+        display: flex;
+        flex-direction: row; /* Align sections side-by-side on larger screens */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    /* Personal Info Section */
+    .personal-info, .education-info {
+        flex: 1 1 48%; /* Take up 48% width on larger screens */
+        padding: 2rem;
+        background: var(--secondary-bg-dark);
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Key Competencies Section */
+    .key-competencies {
+        flex: 1 1 48%; /* Take up 48% width on larger screens */
+        padding: 2rem;
+        background: var(--secondary-bg-dark);
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Competencies List Grid */
+    .competencies-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 competencies per line */
+        gap: 2rem;
+        list-style: none;
+    }
+
+    /* Individual Competency Item */
+    .competencies-list li {
+        background: var(--primary-bg-light);
+        padding: 1.5rem;
+        border-radius: 8px;
+        color: var(--primary-text-dark);
+        font-size: 1.2rem;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    /* Icon Styling */
+    .competencies-list li span {
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
+
+    /* Hover Effect for List Items */
+    .competencies-list li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Light Theme Adjustments */
+    body[data-theme="light"] .competencies-list li {
+        background: var(--primary-bg);
+        color: var(--primary-text);
+    }
+
+    body[data-theme="light"] .competencies-list li:hover {
+        background: var(--primary-bg-light);
+    }
+}
