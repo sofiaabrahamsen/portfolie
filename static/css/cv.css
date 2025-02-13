@@ -20,7 +20,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1.25rem; /* 20px */
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
 }
 
 /* Timeline Item */

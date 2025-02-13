@@ -146,7 +146,7 @@ body[data-theme="light"] .key-competencies h3 {
 
 /* Individual Competency Item */
 .competencies-list li {
-    background: var(--primary-bg-light);
+    background: var(--primary-bg-dark);
     padding: 1rem;
     border-radius: 8px;
     color: var(--primary-text-dark);
@@ -167,6 +167,7 @@ body[data-theme="light"] .key-competencies h3 {
 
 /* Hover Effect for List Items */
 .competencies-list li:hover {
+    background: var(--secondary-bg-dark);
     transform: translateY(-5px);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
@@ -181,78 +182,35 @@ body[data-theme="light"] .competencies-list li:hover {
     background: var(--primary-bg-light);
 }
 
-
-
-/* Responsive Design for Larger Screens (Tablets, Desktops) */
 @media (min-width: 768px) {
-    /* About Content Layout */
     .about-content {
-        display: flex;
-        flex-direction: row; /* Align sections side-by-side on larger screens */
-        flex-wrap: wrap; /* Allow wrapping if necessary */
-        justify-content: space-between;
-        gap: 2rem;
-    }
-
-    /* Personal Info Section */
-    .personal-info, .education-info {
-        flex: 1 1 48%; /* Take up 48% width on larger screens */
-        padding: 2rem;
-        background: var(--secondary-bg-dark);
-        border-radius: 12px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Key Competencies Section */
-    .key-competencies {
-        flex: 1 1 48%; /* Take up 48% width on larger screens */
-        padding: 2rem;
-        background: var(--secondary-bg-dark);
-        border-radius: 12px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Competencies List Grid */
-    .competencies-list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 competencies per line */
-        gap: 2rem;
-        list-style: none;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 2rem; /* Space between sections */
+        max-width: 100%;
+        justify-content: center;
+        align-items: stretch; /* Ensures sections stretch to same height */
     }
 
-    /* Individual Competency Item */
-    .competencies-list li {
-        background: var(--primary-bg-light);
-        padding: 1.5rem;
-        border-radius: 8px;
-        color: var(--primary-text-dark);
-        font-size: 1.2rem;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Personal Info & Education - Same Height with Added Margin */
+    .personal-info, .education-info {
+        width: 100%; /* Ensures both fill their grid cell */
+        padding: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         display: flex;
-        align-items: center;
-        justify-content: start;
+        flex-direction: column;
+        justify-content: space-between; /* Ensures balanced layout */
     }
 
-    /* Icon Styling */
-    .competencies-list li span {
-        font-size: 1.8rem;
-        margin-right: 1rem;
-    }
-
-    /* Hover Effect for List Items */
-    .competencies-list li:hover {
-        transform: translateY(-5px);
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Light Theme Adjustments */
-    body[data-theme="light"] .competencies-list li {
-        background: var(--primary-bg);
-        color: var(--primary-text);
-    }
-
-    body[data-theme="light"] .competencies-list li:hover {
-        background: var(--primary-bg-light);
+    /* Key Competencies - Takes Full Width Below */
+    .key-competencies {
+        grid-column: span 2; /* Makes it take up both columns */
+        width: 50%; /* Centers it */
+        max-width: 50%;
+        margin: 0 auto; /* Centers it */
     }
 }
+
+
+    

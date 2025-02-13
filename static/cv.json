@@ -2,40 +2,40 @@
     "education": [
         {
             "year": "Aug 2024 – Feb 2025",
-            "title": "Top-up i Webudvikling (1. semester)",
-            "description": "Københavns Erhversakademi"
+            "title": "Top-up in Web Development (1st semester)",
+            "description": "Københavns Erhvervsakademi (KEA)"
         },
         {
             "year": "Aug 2021 - Jan 2024",
-            "title": "Uddannet datamatiker",
-            "description": "Københavns Erhversakademi"
+            "title": "Datamatiker (Graduated Computer Science AP Degree)",
+            "description": "Københavns Erhvervsakademi (KEA)"
         },
         {
-            "year": "Jan 2019 – Juli 2021",
-            "title": "HF enkeltfag",
-            "description": "Horsens HF&VUC og Frederiksberg HF&VUC"
+            "year": "Jan 2019 – July 2021",
+            "title": "HF Enkeltfag",
+            "description": "Horsens HF&VUC and Frederiksberg HF&VUC"
         }
     ],
     "work_experience": [
         {
-            "year": "Feb 2020 – nu",
-            "title": "Deltidslagermedarbejder",
-            "description": "Rema Distribution A/S, 2650 Hvidovre - Truckkørsel og pakning af varer til Flammen og tankstationer."
+            "year": "Feb 2020 – Present",
+            "title": "Part-time Warehouse Worker",
+            "description": "Rema Distribution A/S, 2650 Hvidovre - Forklift driving and packing goods for Flammen restaurants and gas stations."
         },
         {
             "year": "Sep 2023 – Nov 2023",
-            "title": "Datamatiker praktik",
-            "description": "Nuub A/S, 2620 Albertslund - 10 ugers praktik hvor jeg beskæftigede mig med Wordpress og PHP for første gang. Endte med at lave et DHL-leverings plugin."
+            "title": "Computer Science Internship",
+            "description": "Nuub A/S, 2620 Albertslund - 10-week internship where I worked with WordPress and PHP for the first time. Ended up developing a DHL delivery plugin."
         },
         {
-            "year": "Okt 2020 – Mar 2022",
-            "title": "Esportstræner i Counter-Strike: Global Offensive (CSGO)",
-            "description": "Dreamgaming/Rødovre Gaming, 2610 Rødovre - Trænede børn (7-14 år) i CSGO, krævede tålmodighed, planlægning og serviceorientering."
+            "year": "Oct 2020 – Mar 2022",
+            "title": "Esports Coach in Counter-Strike: Global Offensive (CSGO)",
+            "description": "Dreamgaming/Rødovre Gaming, 2610 Rødovre - Coached children (ages 7-14) in CSGO, requiring patience, planning, and customer service skills."
         },
         {
             "year": "Jan 2014 – Dec 2018",
-            "title": "Lagermedarbejder",
-            "description": "Aarstiderne A/S, 7150 Barrit - Optælling, pakning af varer, ansvar for paller og lastbiler, gradvist mere ansvar i produktionen."
+            "title": "Warehouse Worker",
+            "description": "Aarstiderne A/S, 7150 Barrit - Inventory counting, packing goods, managing pallets and trucks, gradually taking on more responsibility in production."
         }
     ]
 }
