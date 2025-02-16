@@ -17,11 +17,11 @@
             ]
         },
         {
-            "name": "4th Semester",
+            "name": "4th Semester (EN)",
             "grades": [
-                { "subject": "App Development with C# (EN)", "grade": 4 },
-                { "subject": "IT Security (EN)", "grade": 12 },
-                { "subject": "Mobile Development - Android IOS (EN)", "grade": 4 }
+                { "subject": "App Development C#", "grade": 4 },
+                { "subject": "IT Security", "grade": 12 },
+                { "subject": "Mobile Development", "grade": 4 }
             ]
         },
         {
