@@ -106,6 +106,10 @@ body[data-theme="light"] .timeline-item p {
     color: var(--primary-text);
 }
 
+body[data-theme="light"] .timeline-item p.year {
+    color: var(--button-bg);
+}
+
 /* Key Competencies Section */
 .key-competencies {
     background: var(--secondary-bg-dark); /* Background color for the section */

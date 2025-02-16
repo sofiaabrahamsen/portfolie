@@ -1,0 +1,35 @@
+{
+    "semesters": [
+        {
+            "name": "1st - 2nd Semester",
+            "grades": [
+                { "subject": "1st Partial Test (25%)", "grade": 10 },
+                { "subject": "2nd Partial Test (75%)", "grade": 7 },
+                { "subject": "First Year Exam Total", "grade": 7 }
+            ]
+        },
+        {
+            "name": "3rd Semester",
+            "grades": [
+                { "subject": "System Development", "grade": 12 },
+                { "subject": "Technology", "grade": 7 },
+                { "subject": "Programming", "grade": 2 }
+            ]
+        },
+        {
+            "name": "4th Semester",
+            "grades": [
+                { "subject": "App Development with C# (EN)", "grade": 4 },
+                { "subject": "IT Security (EN)", "grade": 12 },
+                { "subject": "Mobile Development - Android IOS (EN)", "grade": 4 }
+            ]
+        },
+        {
+            "name": "5th Semester",
+            "grades": [
+                { "subject": "Internship", "grade": 12 },
+                { "subject": "Final Exam Project", "grade": 7 }
+            ]
+        }
+    ]
+}
