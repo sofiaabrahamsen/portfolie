@@ -111,7 +111,7 @@ nav ul li a:hover {
     }
 
     nav ul li a {
-        font-size: 14px; /* Slightly larger font size for medium screens */
+        font-size: 10px; /* Slightly larger font size for medium screens */
         padding: 0.5rem; /* Adjust padding */
     }
 }
@@ -221,36 +221,39 @@ body[data-theme="light"] button:hover {
     background-color: var(--button-hover-bg);
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
-    header {
+    .header-container {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    }
-    
-    .header-container {
-        flex-direction: row;
-        align-items: center;
         width: 100%;
     }
-    
-    .logo img {
-        width: 8vw;
-        height: 8vw;
+
+    .logo {
+        flex-shrink: 0; /* Prevents the logo from shrinking */
     }
 
     nav {
-        margin-left: auto;
+        flex-grow: 1; /* Takes up the available space between logo and button */
+        display: flex;
+        justify-content: center;
     }
 
     nav ul {
+        display: flex;
         flex-direction: row;
-        gap: 2rem;
+        gap: 2rem; /* Adjust spacing between links */
+        justify-content: center;
+        flex-wrap: nowrap; /* Prevent wrapping */
     }
-    
-    .theme-toggle {
-        margin-left: 2rem;
+
+    nav ul li {
+        white-space: nowrap; /* Ensures links don't break into new lines */
+    }
+
+    .logo img {
+        width: 8vw;
+        height: 8vw;
     }
 }
 
