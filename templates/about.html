@@ -10,11 +10,18 @@
 <body>
     <header>
         <div class="header-container">
-            <!-- Logo -->
-            <div class="logo">
-                <a href="/">
-                    <img src="{{ url_for('static', filename='assets/portfolio-logo.webp') }}" alt="My Portfolio Logo" class="logo-img">
-                </a>
+            <div class="header-top">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/">
+                        <img src="{{ url_for('static', filename='assets/portfolio-logo.webp') }}" alt="My Portfolio Logo" class="logo-img">
+                    </a>
+                </div>
+    
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle">
+                    🌙
+                </button>
             </div>
     
             <!-- Navigation Links -->
@@ -26,13 +33,9 @@
                     <li><a href="contact">Contact</a></li>
                 </ul>
             </nav>
-    
-            <!-- Theme Toggle Button -->
-            <button id="theme-toggle" class="theme-toggle">
-                Toggle Theme
-            </button>
         </div>
     </header>
+    
     <main class="about-section">
         <div class="about-header">
             <h1>About Me</h1>
