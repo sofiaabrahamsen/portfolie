@@ -3,10 +3,10 @@ button {
     background-color: var(--button-bg-dark);
     color: white;
     border: none;
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
     margin: 0.625rem;
     cursor: pointer;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-medium);
     border-radius: 0.3125rem;
     transition: background 0.3s ease-in-out;
 }

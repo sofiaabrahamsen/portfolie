@@ -78,7 +78,6 @@ body[data-theme="light"] h2 {
 /* Timeline */
 .timeline {
     border-left: 3px solid var(--button-bg-dark);
-    padding-left: 20px;
     text-align: left;
 }
 

@@ -100,10 +100,10 @@ nav ul li a:hover {
 }
 
 /* Medium Screens (Mobile landscape to tablets) */
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
     .logo img {
-        width: 25vw;
-        height: 25vw;
+        width: 20vw;
+        height: 20vw;
     }
 
     nav ul {
@@ -169,16 +169,14 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 6px 8px var(--button-lighter-black);
-    padding: 1rem;
+    border-radius: 0.5rem;
 }
 
 .image-item {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the container without distortion */
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
 
