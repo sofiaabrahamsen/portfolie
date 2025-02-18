@@ -24,7 +24,7 @@ body {
 header {
     background-color: var(--secondary-bg-dark);
     color: var(--primary-text-dark);
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,11 +32,19 @@ header {
     border-radius: 0.5rem;
 }
 
-/* Header Content Container */
 .header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 /* Logo Styling */
@@ -55,7 +63,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    flex-wrap: wrap; /* Allow items to wrap if they don't fit */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -84,57 +92,59 @@ nav ul li a:hover {
     color: white;
 }
 
-/* Small Screen Adjustments for nav */
-@media (max-width: 320px) {
-    header {
-        padding: 0;
-    }
-    nav ul {
-        gap: 0.3rem; /* Reduce space between links */
-    }
-
-    nav ul li a {
-        font-size: var(--font-size-extra-small); /* Adjust font size for smaller screens */
-        padding: 0.5rem; /* Reduce padding to fit the screen */
-    }
+.theme-toggle {
+    background-color: var(--button-black);
+    color: white;
+    width: 50px;  /*fixed width */
+    height: 50px; /*fixed height */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
-/* Medium Screens (Mobile landscape to tablets) */
 @media (min-width: 320px) and (max-width: 768px) {
+    .header-top {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .theme-toggle {
+        border-radius: 50%;
+        background-color: var(--button-hover-bg-dark);
+        color: white;
+        position: relative;
+        width: 10vw;
+        height: 10vw;
+    }
+
     .logo img {
         width: 20vw;
         height: 20vw;
     }
 
     nav ul {
-        gap: 0.75rem; /* Adjust spacing between links */
+        gap: 0.75rem;
     }
 
     nav ul li a {
-        font-size: 10px; /* Slightly larger font size for medium screens */
-        padding: 0.5rem; /* Adjust padding */
+        font-size: 10px;
+        padding: 0.5rem;
+        margin-top: 1rem;
     }
 }
 
-/* Button Styling */
-.theme-toggle {
-    background-color: var(--button-black);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    font-size: var(--font-size-small);
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    font-weight: bold;
-    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3); /* Grey shadow */
-}
-
-.theme-toggle:hover, button:hover {
+/* Theme Toggle Hover */
+.theme-toggle:hover {
+    transform: scale(1.1);
     background-color: var(--button-lighter-black);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    transform: translateY(2px);
 }
 
 /* Welcome Section */
@@ -163,8 +173,8 @@ nav ul li a:hover {
 }
 
 .image-container {
-    width: 300px; /*fixed width */
-    height: 300px; /*fixed height */
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,10 +185,9 @@ nav ul li a:hover {
 .image-item {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-fit: cover;
     border-radius: 0.5rem;
 }
-
 
 /* Light Theme */
 body[data-theme="light"] {
@@ -202,25 +211,16 @@ body[data-theme="light"] nav ul li a:hover {
     background: var(--button-hover-bg);
 }
 
-
 body[data-theme="light"] .theme-toggle {
-    background-color: var(--button-black); /* Still black for light theme */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Same grey shadow */
+    background-color: var(--button-black);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 body[data-theme="light"] .theme-toggle:hover {
-    background-color: var(--button-lighter-black); /* Slightly lighter black for hover */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Darker grey shadow on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-body[data-theme="light"] button {
-    background-color: var(--button-bg);
-}
-
-body[data-theme="light"] button:hover {
-    background-color: var(--button-hover-bg);
-}
-
+/* Responsive Header */
 @media (min-width: 768px) {
     .header-container {
         flex-direction: row;
@@ -230,11 +230,11 @@ body[data-theme="light"] button:hover {
     }
 
     .logo {
-        flex-shrink: 0; /* Prevents the logo from shrinking */
+        flex-shrink: 0;
     }
 
     nav {
-        flex-grow: 1; /* Takes up the available space between logo and button */
+        flex-grow: 1;
         display: flex;
         justify-content: center;
     }
@@ -242,18 +242,24 @@ body[data-theme="light"] button:hover {
     nav ul {
         display: flex;
         flex-direction: row;
-        gap: 2rem; /* Adjust spacing between links */
+        gap: 2rem;
         justify-content: center;
-        flex-wrap: nowrap; /* Prevent wrapping */
+        flex-wrap: nowrap;
     }
 
-    nav ul li {
-        white-space: nowrap; /* Ensures links don't break into new lines */
+    nav ul li a {
+        white-space: nowrap;
+        margin-top: 0;
     }
 
     .logo img {
         width: 8vw;
         height: 8vw;
+    }
+
+    .theme-toggle{
+        width: 5vw;
+        height: 5vw;
     }
 }
 
@@ -262,24 +268,22 @@ body[data-theme="light"] button:hover {
         width: 6vw;
         height: 6vw;
     }
-    
+
     nav ul {
         gap: 3rem;
     }
 }
-
 
 /* Footer Styling */
 footer {
     background-color: var(--secondary-bg-dark);
     color: var(--primary-text-dark);
     text-align: center;
-    margin-top: auto; /* Ensures footer stays at the bottom */
+    margin-top: auto;
     width: 100%;
     border-radius: 0.5rem;
 }
 
-/* Footer Sections */
 footer section {
     display: flex;
     flex-direction: column;
@@ -288,80 +292,6 @@ footer section {
     max-width: 1200px;
 }
 
-/* Footer Content Blocks */
-footer section div {
-    text-align: center;
-    max-width: 300px;
-}
-
-footer h3 {
-    font-size: var(--font-size-large);
-    margin-bottom: 1rem;
-    color: var(--button-bg-dark);
-}
-
-footer p, footer a {
-    font-size: var(--font-size-small);
-    color: var(--primary-text-dark);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    color: var(--button-hover-bg-dark);
-}
-
-/* Social Media Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
-}
-
-.social-icon {
-    font-size: var(--font-size-large);
-    color: var(--primary-text-dark);
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.social-icon:hover {
-    transform: scale(1.2);
-    color: var(--button-hover-bg-dark);
-}
-
-/* Footer Bottom Section */
-footer div:last-of-type {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: var(--font-size-small);
-    color: var(--primary-text-dark);
-}
-
-/* Light Theme Footer */
-body[data-theme="light"] footer {
-    background-color: var(--secondary-bg);
-    color: var(--primary-text);
-}
-
-body[data-theme="light"] footer h3 {
-    color: var(--button-bg);
-}
-
-body[data-theme="light"] footer p, 
-body[data-theme="light"] footer a {
-    color: var(--primary-text);
-}
-
-body[data-theme="light"] .social-icon {
-    color: var(--primary-text);
-}
-
-body[data-theme="light"] .social-icon:hover {
-    color: var(--button-hover-bg);
-}
-
-/* Responsive Footer */
 @media (min-width: 768px) {
     footer section {
         flex-direction: row;
@@ -377,5 +307,5 @@ html, body {
 }
 
 main {
-    flex-grow: 1; /* Pushes the footer down */
+    flex-grow: 1;
 }
