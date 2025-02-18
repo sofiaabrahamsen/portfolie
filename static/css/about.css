@@ -1,10 +1,8 @@
-/* About Section */
 .about-section {
-    padding: 2rem 1rem; /* Adjust padding for mobile first */
+    padding: 2rem 1rem;
     text-align: center;
 }
 
-/* Container */
 .container {
     max-width: 1000px;
     margin: auto;
@@ -12,13 +10,13 @@
 
 /* Profile Image (Fixed Size) */
 .profile-pic {
-    width: 100px; /* Smaller size for mobile */
+    width: 100px;
     height: 100px;
     border-radius: 50%;
     border: 4px solid var(--button-bg-dark);
     object-fit: cover;
     display: block;
-    margin: 0 auto 1rem; /* Centered */
+    margin: 0 auto 1rem;
 }
 
 /* Light Theme Adjustments */
@@ -29,15 +27,14 @@ body[data-theme="light"] .profile-pic {
 /* About Content Layout */
 .about-content {
     display: flex;
-    flex-direction: column; /* Stack items vertically for mobile */
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
     margin-top: 3rem;
 }
 
-/* Personal Info & Education */
 .personal-info, .education-info, .key-competencies {
-    width: 100%; /* Take full width on mobile */
+    width: 100%;
     padding: 1.5rem;
     background: var(--secondary-bg-dark);
     border-radius: 12px;
@@ -62,7 +59,6 @@ body[data-theme="light"] h2 {
     color: var(--button-bg);
 }
 
-/* Hobbies List */
 .hobbies-list {
     list-style: none;
     padding: 0;
@@ -70,7 +66,7 @@ body[data-theme="light"] h2 {
 }
 
 .hobbies-list li {
-    font-size: 1rem; /* Smaller font size for mobile */
+    font-size: 1rem;
     padding: 5px 0;
 }
 
@@ -110,7 +106,7 @@ body[data-theme="light"] .timeline-item p.year {
 
 /* Key Competencies Section */
 .key-competencies {
-    background: var(--secondary-bg-dark); /* Background color for the section */
+    background: var(--secondary-bg-dark);
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -118,7 +114,7 @@ body[data-theme="light"] .timeline-item p.year {
 
 /* Key Competencies Heading */
 .key-competencies h3 {
-    font-size: 1.5rem; /* Adjusted for mobile-first approach */
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--button-bg-dark);
     margin-bottom: 1.5rem;
@@ -141,8 +137,8 @@ body[data-theme="light"] .key-competencies h3 {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Stack items vertically on mobile */
-    gap: 1.5rem; /* Space between list items */
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 /* Individual Competency Item */
@@ -162,8 +158,8 @@ body[data-theme="light"] .key-competencies h3 {
 
 /* Icon Styling */
 .competencies-list li span {
-    font-size: 1.5rem; /* Icon size */
-    margin-right: 1rem; /* Space between icon and text */
+    font-size: 1.5rem;
+    margin-right: 1rem;
 }
 
 /* Hover Effect for List Items */
@@ -186,30 +182,28 @@ body[data-theme="light"] .competencies-list li:hover {
 @media (min-width: 768px) {
     .about-content {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal columns */
-        gap: 2rem; /* Space between sections */
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
         max-width: 100%;
         justify-content: center;
-        align-items: stretch; /* Ensures sections stretch to same height */
+        align-items: stretch;
     }
 
-    /* Personal Info & Education - Same Height with Added Margin */
     .personal-info, .education-info {
-        width: 100%; /* Ensures both fill their grid cell */
+        width: 100%;
         padding: 0;
         padding-top: 1rem;
         padding-bottom: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Ensures balanced layout */
+        justify-content: space-between;
     }
 
-    /* Key Competencies - Takes Full Width Below */
     .key-competencies {
-        grid-column: span 2; /* Makes it take up both columns */
-        width: 50%; /* Centers it */
+        grid-column: span 2;
+        width: 50%;
         max-width: 50%;
-        margin: 0 auto; /* Centers it */
+        margin: 0 auto;
     }
 }
 
