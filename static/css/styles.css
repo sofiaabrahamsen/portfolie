@@ -118,7 +118,6 @@ nav ul li a:hover {
 
     .theme-toggle {
         border-radius: 50%;
-        background-color: var(--button-hover-bg-dark);
         color: white;
         position: relative;
         width: 10vw;
