@@ -46,61 +46,69 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => response.json())
             .then(data => {
                 timeline.innerHTML = ''; // Clear previous content
-
+    
                 const semesterContainer = document.createElement('div');
                 semesterContainer.classList.add('semester-container');
-
+    
                 data.semesters.forEach(semester => {
                     const semesterItem = document.createElement('div');
                     semesterItem.classList.add('semester-item');
-
+    
                     // Semester title
                     const semesterTitle = document.createElement('span');
                     semesterTitle.textContent = semester.name;
-
+    
                     // Container for grades (initially hidden)
                     const gradeList = document.createElement('div');
                     gradeList.classList.add('semester-grades');
-
+    
                     // Add subjects and grades to the list
                     semester.grades.forEach(subject => {
                         const gradeText = document.createElement('p');
-                        
-                        // Create span for the subject and the grade
+    
                         const subjectSpan = document.createElement('span');
                         subjectSpan.classList.add('subject');
                         subjectSpan.textContent = subject.subject;
-                        
+    
                         const gradeSpan = document.createElement('span');
                         gradeSpan.classList.add('grade');
                         gradeSpan.textContent = subject.grade;
-
-                        // Append the spans to the p tag
+    
                         gradeText.appendChild(subjectSpan);
                         gradeText.appendChild(gradeSpan);
-
                         gradeList.appendChild(gradeText);
                     });
-
+    
                     semesterItem.appendChild(semesterTitle);
                     semesterItem.appendChild(gradeList);
-
-                    // Initially set max-height to 0 (hidden)
+    
                     gradeList.style.maxHeight = '0';
                     gradeList.style.overflow = 'hidden';
-
-                    // Add hover effect to trigger the max-height expansion
-                    semesterItem.addEventListener("mouseenter", () => {
-                        gradeList.style.maxHeight = '500px'; // Or adjust based on content
-                    });
-
-                    semesterItem.addEventListener("mouseleave", () => {
-                        gradeList.style.maxHeight = '0';
-                    });
-
+    
+                    // Check screen width to apply behavior
+                    if (window.innerWidth >= 1024) {
+                        // Desktop: Use hover effect
+                        semesterItem.addEventListener("mouseenter", () => {
+                            gradeList.style.maxHeight = '500px';
+                        });
+    
+                        semesterItem.addEventListener("mouseleave", () => {
+                            gradeList.style.maxHeight = '0';
+                        });
+                    } else {
+                        // Mobile/Tablet: Use click to toggle
+                        semesterItem.addEventListener("click", () => {
+                            if (gradeList.style.maxHeight === '0px' || gradeList.style.maxHeight === '') {
+                                gradeList.style.maxHeight = '500px';
+                            } else {
+                                gradeList.style.maxHeight = '0px';
+                            }
+                        });
+                    }
+    
                     semesterContainer.appendChild(semesterItem);
                 });
-
+    
                 timeline.appendChild(semesterContainer);
             })
             .catch(error => console.error('Error loading grades data:', error));
