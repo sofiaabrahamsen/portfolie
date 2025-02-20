@@ -3,16 +3,21 @@ button {
     background-color: var(--button-bg-dark);
     color: white;
     border: none;
-    padding: 1rem 2rem;
+    padding: 0.75rem;
     margin: 0.625rem;
     cursor: pointer;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
     border-radius: 0.3125rem;
     transition: background 0.3s ease-in-out;
+    width: 100%;
 }
 
 button:hover {
-    background-color: var(--button-hover-bg);
+    background-color: var(--button-hover-bg-dark);
+}
+
+body[data-theme="light"] button:hover {
+    background: var(--button-hover-bg);
 }
 
 /* Timeline Container */
@@ -20,17 +25,17 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1.25rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
 /* Timeline Item */
 .timeline-item {
     background: var(--secondary-bg-dark);
-    width: 60%;
+    width: 100%;
     max-width: 37.5rem;
-    margin: 1.25rem 0;
-    padding: 1.25rem;
+    margin: 1rem 0;
+    padding: 1rem;
     border-radius: 0.625rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     position: relative;
@@ -54,7 +59,7 @@ body[data-theme="light"] .timeline-item {
 }
 
 .timeline-content .title {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
     font-weight: bold;
     margin-bottom: 0.3125rem;
     color: var(--primary-text);
@@ -73,15 +78,16 @@ body[data-theme="light"] .timeline-item {
     line-height: 1.4;
 }
 
-/* Horizontal Semester Container */
+/* Semester Container*/
 .semester-container {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
     gap: 1rem;
     padding: 10px;
-    align-items: flex-start;
+    align-items: center;
 }
 
+/* Semester Item */
 .semester-item {
     display: flex;
     flex-direction: column;
@@ -89,7 +95,7 @@ body[data-theme="light"] .timeline-item {
     padding: 1.25rem;
     background-color: var(--secondary-bg);
     border-radius: 0.625rem;
-    width: 200px;
+    width: 100%;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -108,13 +114,13 @@ body[data-theme="dark"] .semester-item {
     box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.15);
 }
 
-/* Semester Grades (hidden by default) */
+/* Semester Grades */
 .semester-grades {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     overflow: hidden;
-    max-height: 0; /* Hidden by default */
+    max-height: 0;
     transition: max-height 0.5s ease-in-out;
     color: white;
     border-radius: 0.5rem;
@@ -124,12 +130,11 @@ body[data-theme="dark"] .semester-item {
     width: 100%;
 }
 
-/* When hovering over the semester item, expand the grade list */
 .semester-item:hover .semester-grades {
     max-height: 500px;
 }
 
-/* For individual grade items (subject and grade) */
+/* Grade Text */
 .semester-grades p {
     margin: 0;
     display: flex;
@@ -137,7 +142,6 @@ body[data-theme="dark"] .semester-item {
     width: 100%;
 }
 
-/* Optional: Style the subject and grade text separately */
 .semester-grades .subject {
     font-weight: bold;
     flex-grow: 1;
@@ -147,13 +151,13 @@ body[data-theme="dark"] .semester-item {
     text-align: right;
 }
 
-
+/* Diploma Section */
 .diploma-section {
     background: var(--secondary-bg-dark);
-    padding: 1.25rem;
-    margin: 1.25rem auto;
+    padding: 1rem;
+    margin: 1rem auto;
     border-radius: 0.625rem;
-    width: 70%;
+    width: 100%;
     box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
     color: var(--primary-text);
 }
@@ -164,7 +168,7 @@ body[data-theme="light"] .diploma-section {
 
 .diploma-section h2 {
     margin-top: 1rem;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
 }
 
 .diploma-section ul {
@@ -176,28 +180,74 @@ body[data-theme="light"] .diploma-section {
     margin: 0.5rem 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Navigation*/
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    color: var(--primary-text);
+    background-color: var(--secondary-bg-dark);
+    border-radius: 0.5rem;
+    transition: background 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: var(--button-hover-bg);
+}
+
+@media (min-width: 768px) {
+    /* Adjust Timeline Item */
     .timeline-item {
-        width: 90%;
-        padding: 1rem;
+        width: 60%;
+        padding: 1.25rem;
     }
 
+    /* Buttons */
     button {
-        padding: 0.75rem;
-        font-size: var(--font-size-small);
+        padding: 1rem 2rem;
+        font-size: var(--font-size-medium);
+        width: auto;
     }
 
+    /* Semester Container */
     .semester-container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
     }
 
     .semester-item {
-        width: 100%;
+        width: 200px;
     }
 
-    .semester-grades {
-        bottom: auto;
-        top: 100%;
+    /* Diploma Section */
+    .diploma-section {
+        width: 70%;
+        padding: 1.25rem;
+    }
+
+    /* Navigation */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    nav ul li a {
+        padding: 1rem 2rem;
+        font-size: var(--font-size-medium);
     }
 }
