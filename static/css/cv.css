@@ -4,7 +4,8 @@ button {
     color: white;
     border: none;
     padding: 0.75rem;
-    margin: 0.625rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
     cursor: pointer;
     font-size: var(--font-size-small);
     border-radius: 0.3125rem;
@@ -25,6 +26,7 @@ body[data-theme="light"] button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -32,7 +34,6 @@ body[data-theme="light"] button:hover {
 /* Timeline Item */
 .timeline-item {
     background: var(--secondary-bg-dark);
-    width: 100%;
     max-width: 37.5rem;
     margin: 1rem 0;
     padding: 1rem;
@@ -154,10 +155,9 @@ body[data-theme="dark"] .semester-item {
 /* Diploma Section */
 .diploma-section {
     background: var(--secondary-bg-dark);
-    padding: 1rem;
+    padding: 0.75rem;
     margin: 1rem auto;
     border-radius: 0.625rem;
-    width: 100%;
     box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
     color: var(--primary-text);
 }
@@ -217,7 +217,6 @@ nav ul li a:hover {
 
     /* Buttons */
     button {
-        padding: 1rem 2rem;
         font-size: var(--font-size-medium);
         width: auto;
     }
@@ -251,3 +250,11 @@ nav ul li a:hover {
         font-size: var(--font-size-medium);
     }
 }
+
+@media (min-width: 1024px){
+    button{
+        padding: 1rem 2rem;
+        margin: 1rem;
+    }
+}
+
