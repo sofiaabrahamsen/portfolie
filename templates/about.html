@@ -1,119 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Portfolio</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-    <script src="../static/app.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Portfolio</title>
+  <link rel="stylesheet" href="../static/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <script src="../static/app.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="header-top">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="/">
-                        <img src="{{ url_for('static', filename='assets/portfolio-logo.webp') }}" alt="My Portfolio Logo" class="logo-img">
-                    </a>
-                </div>
-    
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="theme-toggle">
-                    🌙
-                </button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="main-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="{{ url_for('static', filename='assets/logo.jpg') }}" alt="Logo" width="50" height="50" class="rounded-circle me-2" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link px-3" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3 active" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="/cv">CV</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="/contact">Contact</a></li>
+          <li>
+            <div id="theme-toggle" class="theme-switch" role="button" aria-label="Toggle Theme">
+              <div class="switch-thumb">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+              </div>
             </div>
-    
-            <!-- Navigation Links -->
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about">About me</a></li>
-                    <li><a href="cv">CV</a></li>
-                    <li><a href="contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <main class="about-section">
-        <div class="about-header">
-            <h1>About Me</h1>
-            <p>A little bit about me, my education and skills, and competencies.</p>
-        </div>
-        
-        <div class="about-content">
-            <section class="personal-info">
-                <img src="static/assets/profil.jpg" alt="Profile Picture" class="profile-pic">
-                <h2>Hi, I'm Sofia Abrahamsen 👋</h2>
-                <p>I’m 28, living in Hedehusene with my partner and our baby boy born in Feb 2025. Life is a balance of family, fitness, and tech! 
-                    Right now i am on maternity leave until August 2025. I see myself working in a tech company when i come back from maternity leave.</p>
-                <ul class="hobbies-list">
-                    <li>🏋️ Strength Training</li>
-                    <li>🎾 Padel, Tennis & Badminton</li>
-                    <li>🎮 CS:GO Enthusiast</li>
-                </ul>
-            </section>
-            
-            <section class="education-info">
-                <h2>Education & Skills 📚</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>Top-up Degree, Web Development</h3>
-                        <p>Københavns Erhvervsakademi – Ongoing</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Datamatiker (AP Graduate in Computer Science)</h3>
-                        <p>Developed a deep understanding of programming, system development, and IT business strategy.</p>
-                    </div>
-                </div>
-                <p><strong>Experienced in:</strong> HTML, CSS, Java, JavaScript, C#, IT-security, Python, Bootstrap, Github, Databases (MySql, Arango, Graph, Document) and so much more!</p>
-            </section>
-            <section class="key-competencies">
-                <h3>Key Competencies 💡</h3>
-                <ul class="competencies-list">
-                    <li>🤝 Strong team player</li>
-                    <li>👂 Excellent listener</li>
-                    <li>😊 Friendly, polite, and service-oriented</li>
-                    <li>🗣️ Fluent in both Danish and English (spoken & written)</li>
-                    <li>🌟 Outgoing and social</li>
-                    <li>📅 Well-organized, reliable, and punctual</li>
-                </ul>
-            </section>
-        </div>
-    </main>
-    <footer>
-        <section>
-            <div>
-                <h3>Contact</h3>
-                <p>Telephone: <a href="tel:+4553663634" tabindex="0">+45 53 66 36 34</a></p>
-                <p>E-mail: <a href="mailto:sofia.abrahamsen@yahoo.com" tabindex="0">sofia.abrahamsen@yahoo.com</a></p>
-            </div>
-            <div>
-                <h3>Available</h3>
-                <p>All the time</p>
-            </div>
-            <div>
-                <h3>Follow me</h3>
-                <div class="social-icons">
-                    <a href="https://github.com/sofiaabrahamsen" class="social-icon" aria-label="Github" target="_blank">
-                        <em class="fa-brands fa-github"></em>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sofia-abrahamsen-982a051b4/" class="social-icon" aria-label="LinkedIn" target="_blank">
-                        <em class="fa-brands fa-linkedin"></em>
-                    </a>
-                    <a href="https://www.instagram.com/sofia_abrahamsen/" class="social-icon" aria-label="Instagram" target="_blank">
-                        <em class="fa-brands fa-instagram"></em>
-                    </a>
-                    <a href="https://www.facebook.com/sofia.abrahamsen/" class="social-icon" aria-label="Facebook" target="_blank">
-                        <em class="fa-brands fa-facebook-f"></em>
-                    </a>
-                </div>
-            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5 about-section fade-in">
+    <div class="text-center mb-5 animate__animated animate__fadeInDown">
+      <h1>About Me</h1>
+      <p class="fs-5 text-muted">Who I am, what I love, and what drives me.</p>
+    </div>
+
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-4 text-center">
+        <img src="/static/assets/profil.jpg" alt="Profile Picture" class="img-fluid rounded-circle profile-pic shadow" style="max-width: 250px;" />
+      </div>
+      <div class="col-lg-8 animate__animated animate__fadeInUp">
+        <section class="personal-info p-4 h-100">
+          <p class="mb-2">
+            <i class="fas fa-home me-2 text-primary"></i>
+            I'm 28 years old living in Hedehusene with my partner and baby boy Konrad born February 2025.
+          </p>
+          <p class="mb-2">
+            <i class="fas fa-dumbbell me-2 text-primary"></i>
+            I enjoy padel, strength training and Counter-Strike (which I used to coach kids in).
+          </p>
+          <p>
+            <i class="fas fa-users me-2 text-primary"></i>
+            People describe me as outgoing, positive, and helpful. I enjoy social time with family, friends, and coworkers.
+          </p>
         </section>
-        <div>
-            <p>&copy; 2024 Sofia Abrahamsen. All Rights Reserved.</p>
+        
+      </div>
+    </div>
+
+    <div class="row mt-5 g-4">
+      <div class="col-lg-6">
+        <div class="education-info p-4 animate__animated animate__fadeInLeft h-100">
+          <h2 class="text-center">Education</h2>
+          <div class="timeline mt-4">
+            <div class="timeline-item">
+              <h3>Top-up in Web Development</h3>
+              <p class="year">Aug 2024 – Feb 2025</p>
+              <p>Københavns Erhversakademi (KEA)</p>
+            </div>
+            <div class="timeline-item">
+              <h3>Computer Science (AP Degree)</h3>
+              <p class="year">Aug 2021 – Jan 2024</p>
+              <p>Københavns Erhversakademi (KEA)</p>
+            </div>
+            <div class="timeline-item">
+              <h3>HF Enkeltfag</h3>
+              <p class="year">Jan 2019 – Jul 2021</p>
+              <p>Horsens & Frederiksberg HF&VUC</p>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    
+      <div class="col-lg-6">
+        <div class="key-competencies p-4 animate__animated animate__fadeInRight h-100">
+          <h2 class="text-center">Key Competencies</h2>
+          <ul class="competencies-list mt-4">
+            <li><span>💡</span> Problem-solving and analytical thinking</li>
+            <li><span>📅</span> Well-organized, reliable, and punctual</li>
+            <li><span>🤝</span> Strong team player</li>
+            <li><span>😊</span> Friendly, polite, and service-oriented</li>
+            <li><span>📚</span> Passion for learning and growth</li>
+            <li><span>🗣️</span> Fluent in Danish and English</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="custom-footer mt-auto py-4">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4 d-flex flex-column align-items-center text-center">
+          <h5>Contact</h5>
+          <p><span class="contact-label">Telephone:</span> <a href="tel:+4553663634">+45 53 66 36 34</a></p>
+          <p><span class="contact-label">Email:</span> <a href="mailto:sofia.abrahamsen@yahoo.com">sofia.abrahamsen@yahoo.com</a></p>
+        </div>
+        <div class="col-md-4 mb-4 d-flex flex-column align-items-center text-center">
+          <h5>Available</h5>
+          <p>Always</p>
+        </div>
+        <div class="col-md-4 d-flex flex-column align-items-center text-center">
+          <h5>Follow Me</h5>
+          <div class="d-flex justify-content-center gap-3 mt-2 social-icons">
+            <a href="https://github.com/sofiaabrahamsen" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sofia-abrahamsen-982a051b4/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/sofia_abrahamsen/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/sofia.abrahamsen/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p class="mb-0">&copy; 2024 Sofia Abrahamsen. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

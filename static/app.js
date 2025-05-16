@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function showDiploma() {
         timeline.innerHTML = `
             <div class="diploma-section">
-                <h2>Programme Overview</h2>
+                <h2>Programme Overview (Computer Science)</h2>
                 <p><strong>INFORMATION ON THE PROGRAMME COMPLETED AND THE RESULTS OBTAINED</strong></p>
                 <p><strong>Mode of study:</strong> Full-time degree programme including a period of internship, equivalent to a total of 150 ECTS credits.</p>
                 <p><strong>Programme learning outcomes:</strong> The intended learning outcome for an AP Graduate in Computer Science includes the following:</p>

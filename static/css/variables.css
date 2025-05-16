@@ -3,10 +3,10 @@
 /* Global Variables */
 :root {
     /* Dark Theme Colors */
-    --primary-bg-dark: #3399CC;
-    --secondary-bg-dark: #A6CE39;
+    --primary-bg-dark: #A6CE39;
+    --secondary-bg-dark: #3399CC;
     --primary-text-dark: #EDEDED;
-    --button-bg-dark: #333;
+    --button-bg-dark: #2C2C2C;
     --button-hover-bg-dark: #F7941D;
 
     /* Blue Theme Colors */
@@ -27,4 +27,10 @@
     --font-size-medium-custom: 1.8rem;
     --font-size-large: 1.4rem; /* 22px */
     --font-size-xlarge: 2rem; /* 32px */
+
+    --map-filter: invert(0);
+    [data-theme="dark"] {
+    --map-filter: invert(0.9) hue-rotate(180deg);
+}
+
 }

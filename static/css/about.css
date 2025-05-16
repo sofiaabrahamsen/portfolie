@@ -1,211 +1,174 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
 .about-section {
-    padding: 2rem 1rem;
-    text-align: center;
+    border-bottom: 3px solid var(--primary-bg-dark);
+    padding-bottom: 3rem; /* Space below section */
+}
+body[data-theme="light"] .about-section {
+    border-bottom: 3px solid var(--button-bg);
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
+.text-muted{
+    border-bottom: 3px solid var(--primary-bg-dark);
+    padding: 1rem;
+}
+body[data-theme="light"] .text-muted {
+    border-bottom: 3px solid var(--button-bg);
 }
 
-/* Profile Image (Fixed Size) */
+.about-section h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-bg-dark);
+    animation: fadeInDown 1s ease-out;
+}
+body[data-theme="light"] .about-section h1 {
+    color: var(--button-bg);
+}
+
+.personal-info {
+    h2{
+        color: var(--button-bg);
+    }
+}
+body[data-theme="dark"] .personal-info h2 {
+    color: var(--primary-bg-dark);
+}
+
+.education-info {
+    h2{
+        color: var(--button-bg);
+    }
+    h3{
+        color: var(--primary-text-dark);
+    }
+}
+body[data-theme="dark"] .education-info {
+    h2 {
+        color: var(--primary-bg-dark);
+    }
+}
+
+.key-competencies {
+    h2{
+        color: var(--button-bg);
+    }
+}
+body[data-theme="dark"] .key-competencies h2 {
+    color: var(--primary-bg-dark);
+}
+
+
 .profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 4px solid var(--button-bg-dark);
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 1rem;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+.profile-pic:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Light Theme Adjustments */
-body[data-theme="light"] .profile-pic {
-    border-color: var(--button-bg);
+.img-fluid {
+    border: 3px solid var(--primary-bg-dark);
+}
+body[data-theme="light"] .img-fluid {
+    border: 3px solid var(--button-bg);
 }
 
-/* About Content Layout */
-.about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.personal-info, .education-info, .key-competencies {
-    width: 100%;
-    padding: 1.5rem;
+.personal-info,
+.education-info,
+.key-competencies {
     background: var(--secondary-bg-dark);
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    border-radius: 16px;
+    border: 2px solid var(--primary-bg-dark);
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
 }
-
-/* Light Theme Adjustments */
 body[data-theme="light"] .personal-info,
 body[data-theme="light"] .education-info,
 body[data-theme="light"] .key-competencies {
     background: var(--secondary-bg);
-}
-
-h2 {
-    color: var(--button-bg-dark);
-    margin-bottom: 1rem;
-}
-
-/* Light Theme Adjustments */
-body[data-theme="light"] h2 {
-    color: var(--button-bg);
-}
-
-.hobbies-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-}
-
-.hobbies-list li {
-    font-size: 1rem;
-    padding: 5px 0;
+    border: 2px solid var(--button-bg);
 }
 
 /* Timeline */
 .timeline {
-    border-left: 3px solid var(--button-bg-dark);
-    text-align: left;
+    border-left: 4px solid var(--primary-bg-dark);
+    padding-left: 1.5rem;
 }
-
 .timeline-item {
     position: relative;
-    padding-bottom: 15px;
+    border: 2px solid var(--primary-bg-dark);
+    margin-bottom: 2rem;
 }
-
+.timeline-item::before {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 15px;
+    height: 15px;
+    background: var(--button-bg-dark);
+    border-radius: 50%;
+}
 .timeline-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+    font-size: 1.3rem;
 }
-
-.timeline-item p {
-    font-size: 1rem;
-    color: var(--primary-text-dark);
+.timeline-item p.year {
+    font-weight: bold;
+    color: var(--primary-bg-dark);
 }
-
-/* Light Theme Adjustments */
 body[data-theme="light"] .timeline {
     border-left-color: var(--button-bg);
 }
-
-body[data-theme="light"] .timeline-item p {
-    color: var(--primary-text);
+body[data-theme="light"] .timeline-item {
+    border: 2px solid var(--button-bg);
 }
-
+body[data-theme="light"] .timeline-item::before {
+    background: var(--button-bg);
+}
 body[data-theme="light"] .timeline-item p.year {
     color: var(--button-bg);
 }
 
-/* Key Competencies Section */
-.key-competencies {
-    background: var(--secondary-bg-dark);
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-/* Key Competencies Heading */
+/* Competencies */
 .key-competencies h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--button-bg-dark);
-    margin-bottom: 1.5rem;
     text-transform: uppercase;
+    font-weight: 600;
     letter-spacing: 1px;
 }
-
-/* Light Theme Adjustments */
-body[data-theme="light"] .key-competencies {
-    background: var(--secondary-bg);
-}
-
-body[data-theme="light"] .key-competencies h3 {
-    color: var(--button-bg);
-}
-
-/* Competencies List */
 .competencies-list {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
 }
-
-/* Individual Competency Item */
 .competencies-list li {
     background: var(--primary-bg-dark);
-    padding: 1rem;
-    border-radius: 8px;
     color: var(--primary-text-dark);
-    font-size: 1rem; /* Adjusted font size for mobile */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
+    padding: 1rem;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    font-size: 1.05rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Icon Styling */
 .competencies-list li span {
     font-size: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 0.75rem;
 }
-
-/* Hover Effect for List Items */
 .competencies-list li:hover {
     background: var(--secondary-bg-dark);
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
-/* Light Theme Adjustments */
 body[data-theme="light"] .competencies-list li {
     background: var(--primary-bg);
     color: var(--primary-text);
 }
-
 body[data-theme="light"] .competencies-list li:hover {
-    background: var(--primary-bg-light);
+    background: var(--button-bg);
 }
-
-@media (min-width: 768px) {
-    .about-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        max-width: 100%;
-        justify-content: center;
-        align-items: stretch;
-    }
-
-    .personal-info, .education-info {
-        width: 100%;
-        padding: 0;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .key-competencies {
-        grid-column: span 2;
-        width: 50%;
-        max-width: 50%;
-        margin: 0 auto;
-    }
-}
-
-
-    
